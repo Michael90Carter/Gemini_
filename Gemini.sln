@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin Dashboard", "Admin Dashboard", "{2BA506BF-0BC6-44C9-B1D6-667EA74494A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Food_Cot", "Food_Cot\Food_Cot.csproj", "{EDAABE87-9695-4528-BA47-0EDAF741C05A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{49672B33-0B56-485A-9166-937E67DA1DC0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Food_Cot.Services.ProductAPI", "Food_Cot.Services.ProductAPI\Food_Cot.Services.ProductAPI.csproj", "{0800801A-E8E3-4EBA-A21E-BA01B71D2184}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client Application", "Client Application", "{B24DD638-11E0-4B9F-8105-E4AB0DEDDC2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amara_Restaurant", "Amara_Restaurant\Amara_Restaurant.csproj", "{C497019E-F372-43D7-BB10-1D5BB1755345}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDAABE87-9695-4528-BA47-0EDAF741C05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDAABE87-9695-4528-BA47-0EDAF741C05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDAABE87-9695-4528-BA47-0EDAF741C05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDAABE87-9695-4528-BA47-0EDAF741C05A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0800801A-E8E3-4EBA-A21E-BA01B71D2184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0800801A-E8E3-4EBA-A21E-BA01B71D2184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0800801A-E8E3-4EBA-A21E-BA01B71D2184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0800801A-E8E3-4EBA-A21E-BA01B71D2184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C497019E-F372-43D7-BB10-1D5BB1755345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C497019E-F372-43D7-BB10-1D5BB1755345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C497019E-F372-43D7-BB10-1D5BB1755345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C497019E-F372-43D7-BB10-1D5BB1755345}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EDAABE87-9695-4528-BA47-0EDAF741C05A} = {2BA506BF-0BC6-44C9-B1D6-667EA74494A5}
+		{0800801A-E8E3-4EBA-A21E-BA01B71D2184} = {49672B33-0B56-485A-9166-937E67DA1DC0}
+		{C497019E-F372-43D7-BB10-1D5BB1755345} = {B24DD638-11E0-4B9F-8105-E4AB0DEDDC2F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15951B85-2232-4554-8949-06D773919A41}
+	EndGlobalSection
+EndGlobal
