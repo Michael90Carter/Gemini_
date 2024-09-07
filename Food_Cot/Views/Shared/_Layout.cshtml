@@ -2,48 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Food_Cot</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Food_Cot.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Food_Cot</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Food_Cot - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="~/images/favicon.ico">
+
+    <!-- App css -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/app.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/custom.css" rel="stylesheet" type="text/css" />
+    @RenderSection("Styles", false)
+
+</head>
+<body id="body">
+    <partial name="_LayoutMenu" />
+    <!-- Top Bar Start -->
+    <partial name="_LayoutHeader" />
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+
+        <!-- Page Content-->
+        <div class="page-content-tab">
+
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+
+            <!--Start Rightbar-->
+            <!--Start Rightbar/offcanvas-->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="Appearance" aria-labelledby="AppearanceLabel">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="m-0 font-14" id="AppearanceLabel">Appearance</h5>
+                    <button type="button" class="btn-close text-reset p-0 m-0 align-self-center"
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <h6>Account Settings</h6>
+                    <div class="p-2 text-start mt-3">
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="settings-switch1">
+                            <label class="form-check-label" for="settings-switch1">Auto updates</label>
+                        </div>
+                        <!--end form-switch-->
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="settings-switch2" checked>
+                            <label class="form-check-label" for="settings-switch2">Location Permission</label>
+                        </div>
+                        <!--end form-switch-->
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="settings-switch3">
+                            <label class="form-check-label" for="settings-switch3">Show offline Contacts</label>
+                        </div>
+                        <!--end form-switch-->
+                    </div>
+                    <!--end /div-->
+                    <h6>General Settings</h6>
+                    <div class="p-2 text-start mt-3">
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="settings-switch4">
+                            <label class="form-check-label" for="settings-switch4">Show me Online</label>
+                        </div>
+                        <!--end form-switch-->
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="settings-switch5" checked>
+                            <label class="form-check-label" for="settings-switch5">Status visible to all</label>
+                        </div>
+                        <!--end form-switch-->
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="settings-switch6">
+                            <label class="form-check-label" for="settings-switch6">Notifications Popup</label>
+                        </div>
+                        <!--end form-switch-->
+                    </div>
+                    <!--end /div-->
+                </div>
+                <!--end offcanvas-body-->
+            </div>
+            <!--end Rightbar/offcanvas-->
+            <!--end Rightbar-->
+            <partial name="_LayoutFooter" />
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+        <!-- end page content -->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- App js -->
+    <script src="~/js/app.js"></script>
+    @RenderSection("Scripts", false)
 </body>
 </html>

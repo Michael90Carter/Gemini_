@@ -1,0 +1,39 @@
+﻿.left-sidebar .brand .logo .logo-lg {
+    height: 35px;
+}
+.auth-page .auth-header-box {
+    background-color: #fff;
+}
+
+.auth-page .auth-header-box .logo.logo-admin img {
+    max-height: 35px;
+}
+.modal-content .modal-header {
+    background-color: transparent;
+    border-bottom: 1px solid #eceff5;
+}
+
+
+.offcanvas-header {
+    padding: 1rem 1rem 0.6rem 2.5rem;
+}
+
+.offcanvas-body {
+    padding: 0.7rem 2.5rem 1rem;
+}
+
+.card {
+    margin-bottom: 16px;
+    background-color: #ffffff;
+    border: 1px solid #eceff5;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.offcanvas-body > .card > .card-body {
+    padding: 1rem 1.5rem;
+}
+
+.editableform {
+    margin-left: 10px !important;
+}

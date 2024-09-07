@@ -1,0 +1,240 @@
+﻿@{
+    ViewData["Title"] = "Enumerators";
+}
+@section Styles {
+
+    <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" type="text/css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/css/jqueryui-editable.css" rel="stylesheet"/>
+    <link href="~/plugins/select/selectr.min.css" rel="stylesheet"/>
+}
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-end">
+                <button type="button" class="btn btn-outline-primary mt-3 btn-round ms-auto d-flex" data-bs-toggle="modal" data-bs-target="#exampleModal">+Add New</button>
+                 
+            </div>           
+              <h2 class="page-title mt-3">Enumerators</h2>              
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card mt-3">
+            <div class="card-body">
+                <div class="card-body">
+                        <div class="mb-3">
+                            <div class="row form-row">
+                                <div class="col-md col-sm-4">
+                                    <label for="">Class</label>
+                                    <input type="text" name="From" class="form-control" placeholder="Class">
+                                </div>
+                                <div class="col-md col-sm-4">
+                                    <label for="inputEmail4">stream </label>
+                                    <input type="text" name="To" class="form-control" placeholder="Stream">
+                                </div>
+                                <div class="col-md col-sm-4">
+                                    <label for="inputEmail4">Status:</label>
+                                    <select id="T_Status" name="Status" class="custom-select form-control" placeholder="Status">
+                                        <option selected>All</option>
+                                        <option value="Pending">Pending Approval</option>
+                                        <option>Processing</option>
+                                        <option value="Processed">Successfull</option>
+                                        <option>Failed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <table id="accounts-datatable" class="table dt-responsive">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Id</th>
+                                    <th>FirstName</th>
+                                    <th>LastName</th>
+                                    <th>NIN_No</th>
+                                    <th>Department</th>                                   
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                </div>               
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal-dialog -->
+
+<div class="modal fade bd-example-modal-lg" id ="exampleModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class = "modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header"> 
+                <h6 class="modal-title m-0 text-dark" id="AddAccountModal">Add Enumerator Details</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="add-account-form" name="addaccountform" action="" method="post" novalidate>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                       <label for="number">Enumerator Id</label>
+                                            <div class="input-group">
+                                                <input type="number" name="enumeratorid" class="form-control mb-3" placeholder="Enter Id" required>
+                                            </div>
+                                           
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">First Name</label>
+                                            <div class="input-group">
+                                                <input type="text" name="firstname" class="form-control mb-3" placeholder="Enter First Name" required>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="date">Last Name</label>
+                                            <div class="input-group">
+                                                <input type="text" name="lastname" class="form-control mb-3" placeholder="Enter Last Name" required>
+                                            </div>
+                                    </div>
+                                </div>
+                                                               
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Gender</label>
+                                        <div class="input-group">
+                                            <div class="input-group">
+                                                <input type="text" name="gender" class="form-control mb-3" placeholder="Enter Sex" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">NIN No</label>
+                                        <div class="input-group">
+                                            <input type="text" name="nin_no" class="form-control mb-3" placeholder = "Enter Nin Number" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Department</label>
+                                        <div class="input-group">
+                       
+                                            <input type="text" name="department" class="form-control" placeholder="Enter Department" required>
+                                        </div>
+                                            
+                                    </div>
+                                </div>
+
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Address</label>
+                                            <div class="input-group">
+                                                <div class="input-group">
+                                                    <input type="text" name="address" class="form-control mb-3" placeholder="Enter Address" required>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Telephone Number</label>
+                                        <div class="input-group">
+                                            <div class="input-group">
+                                                <input type="text" name="telephone" class="form-control mb-3" placeholder="Enter telephone number" required>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                   
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="date">Date Registered</label>
+                                    <div class="input-group">
+                                        <input type="date" name="dateregistered" class="form-control mb-3" placeholder="Enter Registration Date" required>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="picture">Profile pic</label>
+                                    <div class="input-group">
+                                        <input type="email" name="profilepicture" class="form-control mb-3" placeholder="Attach Profile Picture" required>
+                                    </div>
+                                </div>
+                             </div>
+                             
+                           
+                             
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label> Description</label>
+                                        <div class="input-group">
+                                            <textarea class="form-control" rows="5" name="LongDescription" aria-label="Enter description" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-outline-primary btn-round px-3 py-2 mt-4" id="add-account-submit-button">Create</button>                     
+                        </div>                       
+                    </div>
+                </form>                  
+            </div>
+        </div>                                
+    </div>  
+</div>
+
+<!--  Modal content for view product details -->
+<div class="modal" id="view_product_modal" tabindex="-1" role="dialog" aria-labelledby="ViewProductsModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title mt-0 text-dark" id="ViewProductsModal">Product Details</h5>
+                
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="product-details-container">
+                    
+
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+@section Scripts
+{
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/js/jqueryui-editable.min.js"></script>
+    <script type="text/javascript" src="~/plugins/select/selectr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.10.6/libphonenumber-js.min.js" integrity="sha512-DIE7nTrAVZlfQH99EttilfOthEIDoL77dPajcUN4diozul9IgSDHUdgW0Kfqj5Qi6k1LQ53ESujDZSo00FEpYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/pages/enumerators.js"></script>
+}

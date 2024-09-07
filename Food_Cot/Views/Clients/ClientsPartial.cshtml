@@ -1,0 +1,45 @@
+﻿@Model clients
+
+<div class="offcanvas-body">
+    <div class="offcanvas-header">
+        <h3 class="pro-title d-inline-block" id="edit-subscription-name"  data-type="text" data-url="/pricings/@Model.id " data-pk="Name">@Model.firstName</h3>
+    </div>
+    <div class="float-right d-flex justify-content-between">
+        
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+     
+    <div class="card mt-3">
+        <div class="card-body">           
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">     
+                        <div class="row align-items-start">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="m-0 font-13">Product ID </p>
+                                        <h6 class="mb-3 mt-1 ">@Model.id </h6>                                  
+                                        <p class="m-0 font-13">Percentage Fee </p>
+
+                                    </div>
+                                </div>
+                            </div>                     
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                        <p class="m-0 font-13">Provider ID </p>
+                                        
+                                </div>               
+                            </div>
+                         </div>                            
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </div>
+</div>
+            
+ 
+    
