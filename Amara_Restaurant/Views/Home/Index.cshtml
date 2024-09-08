@@ -1,8 +1,156 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="hero-content">
+        <h1>Welcome to Amara Restaurant</h1>
+        <p>Discover the best food experience with our delicious dishes crafted with love.</p>
+        <a href="#menu" class="btn btn-primary">View Menu</a>
+    </div>
 </div>
+
+<!-- Featured Section -->
+<section class="featured-section">
+    <h2>Our Specialties</h2>
+    <div class="featured-dishes">
+        <div class="dish">
+            <img src="/images/dish1.jpg" alt="Featured Dish 1">
+            <h3>Grilled Chicken</h3>
+            <p>Tender and juicy grilled chicken served with fresh herbs and spices.</p>
+        </div>
+        <div class="dish">
+            <img src="/images/dish2.jpg" alt="Featured Dish 2">
+            <h3>Pasta Primavera</h3>
+            <p>A classic Italian dish with fresh vegetables and a savory sauce.</p>
+        </div>
+        <div class="dish">
+            <img src="/images/dish3.jpg" alt="Featured Dish 3">
+            <h3>Chocolate Lava Cake</h3>
+            <p>Rich and gooey chocolate cake with a molten center.</p>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+    <h2>About Us</h2>
+    <p>At [Restaurant Name], we are dedicated to serving delicious food made from the freshest ingredients. Our chefs craft every dish to bring you a taste that you will love.</p>
+</section>
+
+
+
+
+<form>
+    <div class="container row">
+        <div class="col-4">
+            <div class="p-0 my-3 border">
+                <div class="card">
+                    <div class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title text-success">P1</h3>
+                            <span class="badge badge-light mb-2">p2</span>
+                            <p class="card-text">Description</p>
+                            <div class="row">
+                                <div class="col pt-1">
+                                    <span style="font-size:23px;">Price</span>
+
+                                </div>
+                                <div class="col">
+                                    <a class="btn btn-success form-control">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <h2>Visit Us</h2>
+    <p>Address: 123 Food Street, Food City, Country</p>
+    <p>Phone: (123) 456-7890</p>
+    <p>Email: contact@restaurant.com</p>
+</section>
+
+<style>
+    /* Hero Section */
+    .hero-section {
+        background: url('/images/restaurant-background.jpg') no-repeat center center;
+        background-size: cover;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+    .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+    }
+    .btn-primary {
+        padding: 10px 20px;
+        background-color: #e74c3c;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    /* Featured Section */
+    .featured-section {
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .featured-dishes {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .dish {
+        max-width: 300px;
+    }
+    .dish img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* About Section */
+    .about-section {
+        padding: 20px;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+
+
+
+
+
+
