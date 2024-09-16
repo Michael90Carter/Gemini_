@@ -9,6 +9,6 @@ namespace Food_Cot.Services.ProductAPI.DbContexts
         {
 
         }
-        public DbSet<product> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

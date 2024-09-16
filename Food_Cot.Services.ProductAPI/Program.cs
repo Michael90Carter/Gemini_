@@ -8,7 +8,6 @@ var Configuration = builder.Configuration;
 
 // Add services to the container.
 
-
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
